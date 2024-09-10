@@ -53,7 +53,7 @@ public class App
         log.debug("threadB-state:{}",threadB.getState());
 
         //TODO#11 'Application exit!' message를 출력 합니다.
-        System.out.println("Application exit!");
+       log.debug("Application exit!");
 
     }
 }
