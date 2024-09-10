@@ -19,17 +19,16 @@ public class App
     public static void main( String[] args )
     {
         //TODO#1 CounterHandler 객체를 생성 합니다. countMaxSize : 10
-        //하나의 인스터스에 두개의 스레드가 접근하지 않도록 두 개의 객체를 생성
-        CounterHandler counterHandlerA = new CounterHandler(10);
-        CounterHandler counterHandlerB = new CounterHandler(10);
+        CounterHandler counterHandler = new CounterHandler(10);
+
         //TODO#2 threadA 생성시 counterHandler 객체를 paramter로 전달 합니다.
-        Thread threadA = new Thread(counterHandlerA);
+        Thread threadA = new Thread(counterHandler);
 
         //TODO#3 threadA의 name을 'my-counter-A' 로 설정 합니다.
         threadA.setName("my-counter-A");
 
         //TODO#4 threadB 생성시 counterHandler 객체를 paramter로 전달 합니다.
-        Thread threadB = new Thread(counterHandlerB);
+        Thread threadB = new Thread(counterHandler);
 
         //TODO#5 threadB의 name을 'my-counter-B' 로 설정 합니다.
         threadB.setName("my-counter-B");
